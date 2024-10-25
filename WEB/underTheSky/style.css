@@ -1,0 +1,126 @@
+main{
+    background-color:white;
+
+}
+.circle-color{
+    border:3px solid skyblue !important;
+    transition:border-color 2s;
+}
+#circle1{
+    transition:border-color 2s;
+    border:3px solid skyblue;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle2{
+    transition:border-color 2s;
+    border:3px solid black;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle3{
+    transition:border-color 2s;
+    border:3px solid black;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle4{
+    transition:border-color 2s;
+    border:3px solid black;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle:hover{
+    border:3px solid blue;
+}
+#circleLine{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+}
+
+.nextButton{
+    margin:20px;
+    border:none;
+    background-color:aquamarine;
+    width:50px;
+    height:25px;
+    text-align: center;
+}
+.prvButton{
+    margin:20px;
+    border:none;
+    background-color:aquamarine;
+    width:50px;
+    height:25px;
+    text-align: center;
+}
+
+#buttonLine{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+#progress{
+    border-top:3px black solid;
+    width:120px;
+    z-index: -2;
+}
+#progress-move{
+    border-top:3px skyblue solid;
+    width:10px;
+    transition:width 3s;
+}
+.progress_color{
+    border-top:4px skyblue solid ;
+    width: 50px!important;
+    transition:width 3s;
+}
+.progress_color2{
+    border-top:4px skyblue solid ;
+    width: 95px!important;
+    transition:width 3s;
+}
+.progress_color3{
+    border-top:4px skyblue solid ;
+    width: 135px!important;
+    transition:width 3s;
+}
+#center{
+    position:absolute;
+    align-items: center;
+}
+#center-move{
+    position:absolute;
+    align-items: center;
+    left:0;
+}
+#width{
+    position:absolute;
+    width:155px;
+    margin-top:-3px;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+    
+        <div id="head">
+        
+           
+                <div id="circleLine">
+                   
+                    <div id="circle1"></div>
+         
+                    <div id="circle2"></div>
+              
+                    <div id="circle3"></div>
+              
+                    <div id="circle4"></div>
+                    <div id="center">
+                        <div id="progress"></div>
+                    </div>
+                    <div id="width">
+                        <div id="center-move">
+                            <div id="progress-move"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="buttonLine">
+                <button class="prvButton" onclick="prvButtonClick()">이전</button>
+                <button class="nextButton" onclick="nextButtonClick()">다음</button>
+            </div>
+            
+        </div>        
+    </main>
+</body>
+<script>
+    let count=1;
+    function nextButtonClick(){
+        if(count==1){
+            const circle = document.getElementById("circle2")
+            const element = document.getElementById("progress-move");
+            element.classList.add("progress_color");
+            setTimeout(function(){
+                circle.classList.add("circle-color")
+            },2000);
+            
+            console.log(count)
+        }
+        if(count==2){
+            const circle = document.getElementById("circle3")
+            const element = document.getElementById("progress-move");
+            element.classList.toggle("progress_color");
+            element.classList.add("progress_color2");
+
+            setTimeout(function(){
+                circle.classList.add("circle-color")
+            },2000);
+            console.log(count)
+        }
+        if(count==3){
+            const circle = document.getElementById("circle4")
+            const element = document.getElementById("progress-move");
+            element.classList.toggle("progress_color2");
+            element.classList.add("progress_color3");
+            setTimeout(function(){
+                circle.classList.add("circle-color")
+            },2000);
+            
+            console.log(count)
+        }
+        count = count + 1
+        if(count >= 4){
+            count=4
+        }
+} 
+    function prvButtonClick(){
+        if(count==2){
+            const circle = document.getElementById("circle2")
+            const element = document.getElementById("progress-move");
+            circle.classList.toggle("circle-color")
+           
+            setTimeout(function(){
+                element.classList.toggle("progress_color");
+            },1000);
+            
+            console.log(count)
+        }
+        if(count==3){
+            const circle = document.getElementById("circle3")
+            const element = document.getElementById("progress-move");
+            circle.classList.toggle("circle-color")
+
+
+            setTimeout(function(){
+                element.classList.toggle("progress_color");
+                element.classList.toggle("progress_color2");
+            },1000);
+            console.log(count)
+        }
+        if(count==4){
+            const circle = document.getElementById("circle4")
+            const element = document.getElementById("progress-move");
+            circle.classList.toggle("circle-color")
+
+            setTimeout(function(){
+                element.classList.toggle("progress_color2");
+                element.classList.toggle("progress_color3");
+            },1000);
+            
+            console.log(count)
+        }
+        count = count - 1
+        if(count<=0){
+            count=1
+        }
+}
+    
+</script>
+<style>
+    main{
+    background-color:white;
+
+}
+.circle-color{
+    border:3px solid skyblue !important;
+    transition:border-color 2s;
+}
+#circle1{
+    transition:border-color 2s;
+    border:3px solid skyblue;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle2{
+    transition:border-color 2s;
+    border:3px solid black;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle3{
+    transition:border-color 2s;
+    border:3px solid black;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle4{
+    transition:border-color 2s;
+    border:3px solid black;
+    text-align: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;    
+    background-color: white;
+    margin:10px;
+    z-index: 1;
+}
+#circle:hover{
+    border:3px solid blue;
+}
+#circleLine{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+}
+
+.nextButton{
+    margin:20px;
+    border:none;
+    background-color:aquamarine;
+    width:50px;
+    height:25px;
+    text-align: center;
+}
+.prvButton{
+    margin:20px;
+    border:none;
+    background-color:aquamarine;
+    width:50px;
+    height:25px;
+    text-align: center;
+}
+
+#buttonLine{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+#progress{
+    border-top:3px black solid;
+    width:120px;
+    z-index: -2;
+}
+#progress-move{
+    border-top:3px skyblue solid;
+    width:10px;
+    transition:width 3s;
+}
+.progress_color{
+    border-top:4px skyblue solid ;
+    width: 50px!important;
+    transition:width 3s;
+}
+.progress_color2{
+    border-top:4px skyblue solid ;
+    width: 95px!important;
+    transition:width 3s;
+}
+.progress_color3{
+    border-top:4px skyblue solid ;
+    width: 135px!important;
+    transition:width 3s;
+}
+#center{
+    position:absolute;
+    align-items: center;
+}
+#center-move{
+    position:absolute;
+    align-items: center;
+    left:0;
+}
+#width{
+    position:absolute;
+    width:155px;
+    margin-top:-3px;
+}
+</style>
+</html>
